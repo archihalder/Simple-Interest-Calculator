@@ -27,7 +27,7 @@ function updateRate() {
 
 function validatePrincipal() {
   var principal = document.getElementById("principal").value;
-  if (parseInt(principal) <= 0) {
+  if (parseFloat(principal) <= 0 || isNaN(parseFloat(principal))) {
     alert("Enter a positive number");
     document.getElementById("principal").focus();
   }
